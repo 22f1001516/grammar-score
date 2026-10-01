@@ -1,0 +1,651 @@
+{
+  "primary_metric": "mae",
+  "outer_cv": "3 repeats x 5 folds",
+  "candidate_pool": "RidgeCV and SVR_RBF on WavLM layers 00-12; top three chosen inside each outer training split using inner 3-fold CV",
+  "blend_comparison": "Median and predeclared nearby weight patterns; inner_optimal weights selected in inner CV",
+  "summary": [
+    {
+      "method": "inner_optimal",
+      "mean_mae": 0.4062851320817986,
+      "std_mae_across_repeats": 0.002034609913704264,
+      "repeat_maes": [
+        0.40357591324715475,
+        0.4084791199780701,
+        0.406800363020171
+      ],
+      "mean_rmse": 0.5422297257967132,
+      "std_rmse_across_repeats": 0.0034771415057886354,
+      "repeat_rmses": [
+        0.5374858590447321,
+        0.5434802467791116,
+        0.5457230715662963
+      ],
+      "mean_fold_mae": 0.4062623826743211,
+      "std_fold_mae": 0.022603505745942273
+    },
+    {
+      "method": "weights_0.50_0.25_0.25",
+      "mean_mae": 0.4064762669647775,
+      "std_mae_across_repeats": 0.0043235834409942895,
+      "repeat_maes": [
+        0.4004262189519349,
+        0.4087346424607431,
+        0.4102679394816547
+      ],
+      "mean_rmse": 0.5425314943185819,
+      "std_rmse_across_repeats": 0.00570050145638411,
+      "repeat_rmses": [
+        0.535890847868607,
+        0.5418932905035984,
+        0.5498103445835405
+      ],
+      "mean_fold_mae": 0.40646255298430545,
+      "std_fold_mae": 0.020783193747528926
+    },
+    {
+      "method": "weights_0.50_0.50_0.00",
+      "mean_mae": 0.4080048500211131,
+      "std_mae_across_repeats": 0.005296971656917235,
+      "repeat_maes": [
+        0.4007329177193424,
+        0.4100832175233971,
+        0.41319841482059977
+      ],
+      "mean_rmse": 0.5450625150030851,
+      "std_rmse_across_repeats": 0.007182726726957469,
+      "repeat_rmses": [
+        0.5374194407103244,
+        0.5430896663867006,
+        0.55467843791223
+      ],
+      "mean_fold_mae": 0.4079849103706485,
+      "std_fold_mae": 0.019987794456291938
+    },
+    {
+      "method": "weights_0.25_0.50_0.25",
+      "mean_mae": 0.40801134565322145,
+      "std_mae_across_repeats": 0.0037696104716544313,
+      "repeat_maes": [
+        0.4027634582487198,
+        0.40982306832381615,
+        0.41144751038712846
+      ],
+      "mean_rmse": 0.5435693332117898,
+      "std_rmse_across_repeats": 0.00598300699514853,
+      "repeat_rmses": [
+        0.5367750660419456,
+        0.5425992011447762,
+        0.5513337324486476
+      ],
+      "mean_fold_mae": 0.4079913264958446,
+      "std_fold_mae": 0.02246341810211427
+    },
+    {
+      "method": "weights_0.50_0.00_0.50",
+      "mean_mae": 0.4087645795834582,
+      "std_mae_across_repeats": 0.0034338057911371383,
+      "repeat_maes": [
+        0.4039202652421991,
+        0.41147998961285326,
+        0.41089348389532215
+      ],
+      "mean_rmse": 0.5459455880116332,
+      "std_rmse_across_repeats": 0.005104005517913771,
+      "repeat_rmses": [
+        0.5392318316842143,
+        0.547006727629172,
+        0.5515982047215132
+      ],
+      "mean_fold_mae": 0.40875752392872067,
+      "std_fold_mae": 0.022415115713639758
+    },
+    {
+      "method": "median",
+      "mean_mae": 0.40899971664966744,
+      "std_mae_across_repeats": 0.003690028937685624,
+      "repeat_maes": [
+        0.4041622288445229,
+        0.40972331921808935,
+        0.4131136018863899
+      ],
+      "mean_rmse": 0.5461134491542521,
+      "std_rmse_across_repeats": 0.005751283658699465,
+      "repeat_rmses": [
+        0.5405266084433009,
+        0.5437876602214607,
+        0.5540260787979947
+      ],
+      "mean_fold_mae": 0.4089869253181609,
+      "std_fold_mae": 0.021395455350794783
+    }
+  ],
+  "folds": [
+    {
+      "repeat": 1,
+      "fold": 1,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_09/RidgeCV",
+        "wavlm_layer_10/RidgeCV",
+        "wavlm_layer_10/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "median_mae": 0.37195671170810457,
+      "inner_optimal_mae": 0.36706484962900804,
+      "weights_0.50_0.25_0.25_mae": 0.36706484962900804,
+      "weights_0.50_0.00_0.50_mae": 0.36333170790382213,
+      "weights_0.25_0.50_0.25_mae": 0.3657491474761037,
+      "weights_0.50_0.50_0.00_mae": 0.374600171656487
+    },
+    {
+      "repeat": 1,
+      "fold": 2,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_10/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.25,
+        0.5,
+        0.25
+      ],
+      "median_mae": 0.40684093137072214,
+      "inner_optimal_mae": 0.4073821492820777,
+      "weights_0.50_0.25_0.25_mae": 0.40717794947019886,
+      "weights_0.50_0.00_0.50_mae": 0.41223144394250133,
+      "weights_0.25_0.50_0.25_mae": 0.4073821492820777,
+      "weights_0.50_0.50_0.00_mae": 0.40741649224160953
+    },
+    {
+      "repeat": 1,
+      "fold": 3,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_10/SVR_RBF",
+        "wavlm_layer_08/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.25,
+        0.5,
+        0.25
+      ],
+      "median_mae": 0.4194265344951803,
+      "inner_optimal_mae": 0.4222982224757835,
+      "weights_0.50_0.25_0.25_mae": 0.41901796320437945,
+      "weights_0.50_0.00_0.50_mae": 0.4229015934638516,
+      "weights_0.25_0.50_0.25_mae": 0.4222982224757835,
+      "weights_0.50_0.50_0.00_mae": 0.41733193689926973
+    },
+    {
+      "repeat": 1,
+      "fold": 4,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_10/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "median_mae": 0.4204962469525936,
+      "inner_optimal_mae": 0.42831772585237426,
+      "weights_0.50_0.25_0.25_mae": 0.41794004714199195,
+      "weights_0.50_0.00_0.50_mae": 0.42831772585237426,
+      "weights_0.25_0.50_0.25_mae": 0.41899984303396387,
+      "weights_0.50_0.50_0.00_mae": 0.4123500748251837
+    },
+    {
+      "repeat": 1,
+      "fold": 5,
+      "n_valid": 153,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_08/SVR_RBF",
+        "wavlm_layer_07/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "median_mae": 0.40207718042053353,
+      "inner_optimal_mae": 0.39274629681188555,
+      "weights_0.50_0.25_0.25_mae": 0.3908682203883589,
+      "weights_0.50_0.00_0.50_mae": 0.39274629681188555,
+      "weights_0.25_0.50_0.25_mae": 0.3993658666928395,
+      "weights_0.50_0.50_0.00_mae": 0.3919086122895528
+    },
+    {
+      "repeat": 2,
+      "fold": 1,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_07/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "median_mae": 0.45723851992368386,
+      "inner_optimal_mae": 0.45017247632417384,
+      "weights_0.50_0.25_0.25_mae": 0.45017247632417384,
+      "weights_0.50_0.00_0.50_mae": 0.4552115164412047,
+      "weights_0.25_0.50_0.25_mae": 0.4543820834307386,
+      "weights_0.50_0.50_0.00_mae": 0.44723444157398523
+    },
+    {
+      "repeat": 2,
+      "fold": 2,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_10/SVR_RBF",
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_09/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "median_mae": 0.3725712317774609,
+      "inner_optimal_mae": 0.37405114026605,
+      "weights_0.50_0.25_0.25_mae": 0.37405114026605,
+      "weights_0.50_0.00_0.50_mae": 0.376070103253188,
+      "weights_0.25_0.50_0.25_mae": 0.3737609604542287,
+      "weights_0.50_0.50_0.00_mae": 0.3759175862478596
+    },
+    {
+      "repeat": 2,
+      "fold": 3,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_09/RidgeCV",
+        "wavlm_layer_10/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.75,
+        0.25,
+        0.0
+      ],
+      "median_mae": 0.42741921210397316,
+      "inner_optimal_mae": 0.4259034385824554,
+      "weights_0.50_0.25_0.25_mae": 0.4252856636405032,
+      "weights_0.50_0.00_0.50_mae": 0.4268978652681707,
+      "weights_0.25_0.50_0.25_mae": 0.4276388497767971,
+      "weights_0.50_0.50_0.00_mae": 0.4275507077707949
+    },
+    {
+      "repeat": 2,
+      "fold": 4,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_08/SVR_RBF",
+        "wavlm_layer_10/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "median_mae": 0.4067271804233925,
+      "inner_optimal_mae": 0.41569696050408483,
+      "weights_0.50_0.25_0.25_mae": 0.4120729253314619,
+      "weights_0.50_0.00_0.50_mae": 0.4057590837999283,
+      "weights_0.25_0.50_0.25_mae": 0.4167531368064196,
+      "weights_0.50_0.50_0.00_mae": 0.4206975337224434
+    },
+    {
+      "repeat": 2,
+      "fold": 5,
+      "n_valid": 153,
+      "selected": [
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_07/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.25,
+        0.5,
+        0.25
+      ],
+      "median_mae": 0.3844966422713729,
+      "inner_optimal_mae": 0.3763630382281981,
+      "weights_0.50_0.25_0.25_mae": 0.3819168653315968,
+      "weights_0.50_0.00_0.50_mae": 0.39334361060693124,
+      "weights_0.25_0.50_0.25_mae": 0.3763630382281981,
+      "weights_0.50_0.50_0.00_mae": 0.37881276340502984
+    },
+    {
+      "repeat": 3,
+      "fold": 1,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_10/RidgeCV",
+        "wavlm_layer_07/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.25,
+        0.5,
+        0.25
+      ],
+      "median_mae": 0.42123608907468185,
+      "inner_optimal_mae": 0.42620796006680267,
+      "weights_0.50_0.25_0.25_mae": 0.41806784590265955,
+      "weights_0.50_0.00_0.50_mae": 0.4166616648115579,
+      "weights_0.25_0.50_0.25_mae": 0.42620796006680267,
+      "weights_0.50_0.50_0.00_mae": 0.4291760412809369
+    },
+    {
+      "repeat": 3,
+      "fold": 2,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_09/RidgeCV",
+        "wavlm_layer_07/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.0,
+        0.5
+      ],
+      "median_mae": 0.3964058357193102,
+      "inner_optimal_mae": 0.3881026204207766,
+      "weights_0.50_0.25_0.25_mae": 0.3939524627694576,
+      "weights_0.50_0.00_0.50_mae": 0.3881026204207766,
+      "weights_0.25_0.50_0.25_mae": 0.40155745510419666,
+      "weights_0.50_0.50_0.00_mae": 0.40219952920657526
+    },
+    {
+      "repeat": 3,
+      "fold": 3,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_08/RidgeCV",
+        "wavlm_layer_08/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "median_mae": 0.42589779648674064,
+      "inner_optimal_mae": 0.41301621583110304,
+      "weights_0.50_0.25_0.25_mae": 0.41496774917299806,
+      "weights_0.50_0.00_0.50_mae": 0.41869964522898606,
+      "weights_0.25_0.50_0.25_mae": 0.4215506029312653,
+      "weights_0.50_0.50_0.00_mae": 0.41301621583110304
+    },
+    {
+      "repeat": 3,
+      "fold": 4,
+      "n_valid": 154,
+      "selected": [
+        "wavlm_layer_07/RidgeCV",
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_09/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "median_mae": 0.4111364155675981,
+      "inner_optimal_mae": 0.40941771590803894,
+      "weights_0.50_0.25_0.25_mae": 0.40941771590803894,
+      "weights_0.50_0.00_0.50_mae": 0.4071827122378538,
+      "weights_0.25_0.50_0.25_mae": 0.40579970318022957,
+      "weights_0.50_0.50_0.00_mae": 0.41432896681325254
+    },
+    {
+      "repeat": 3,
+      "fold": 5,
+      "n_valid": 153,
+      "selected": [
+        "wavlm_layer_09/RidgeCV",
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_10/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "median_mae": 0.41087735147706467,
+      "inner_optimal_mae": 0.39719492993200267,
+      "weights_0.50_0.25_0.25_mae": 0.41496442028370395,
+      "weights_0.50_0.00_0.50_mae": 0.4239052688877769,
+      "weights_0.25_0.50_0.25_mae": 0.4020608784980239,
+      "weights_0.50_0.50_0.00_mae": 0.40723258179564437
+    }
+  ],
+  "selected_candidates_by_outer_fold": [
+    {
+      "repeat": 1,
+      "fold": 1,
+      "selected": [
+        "wavlm_layer_09/RidgeCV",
+        "wavlm_layer_10/RidgeCV",
+        "wavlm_layer_10/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "repeat": 1,
+      "fold": 2,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_10/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.25,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "repeat": 1,
+      "fold": 3,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_10/SVR_RBF",
+        "wavlm_layer_08/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.25,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "repeat": 1,
+      "fold": 4,
+      "selected": [
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_10/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.0,
+        0.5
+      ]
+    },
+    {
+      "repeat": 1,
+      "fold": 5,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_08/SVR_RBF",
+        "wavlm_layer_07/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.0,
+        0.5
+      ]
+    },
+    {
+      "repeat": 2,
+      "fold": 1,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_07/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "repeat": 2,
+      "fold": 2,
+      "selected": [
+        "wavlm_layer_10/SVR_RBF",
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_09/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "repeat": 2,
+      "fold": 3,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_09/RidgeCV",
+        "wavlm_layer_10/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.75,
+        0.25,
+        0.0
+      ]
+    },
+    {
+      "repeat": 2,
+      "fold": 4,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_08/SVR_RBF",
+        "wavlm_layer_10/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        1.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "repeat": 2,
+      "fold": 5,
+      "selected": [
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_07/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.25,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "repeat": 3,
+      "fold": 1,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_10/RidgeCV",
+        "wavlm_layer_07/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.25,
+        0.5,
+        0.25
+      ]
+    },
+    {
+      "repeat": 3,
+      "fold": 2,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_09/RidgeCV",
+        "wavlm_layer_07/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.0,
+        0.5
+      ]
+    },
+    {
+      "repeat": 3,
+      "fold": 3,
+      "selected": [
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_08/RidgeCV",
+        "wavlm_layer_08/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.5,
+        0.0
+      ]
+    },
+    {
+      "repeat": 3,
+      "fold": 4,
+      "selected": [
+        "wavlm_layer_07/RidgeCV",
+        "wavlm_layer_07/SVR_RBF",
+        "wavlm_layer_09/SVR_RBF"
+      ],
+      "inner_optimal_weights": [
+        0.5,
+        0.25,
+        0.25
+      ]
+    },
+    {
+      "repeat": 3,
+      "fold": 5,
+      "selected": [
+        "wavlm_layer_09/RidgeCV",
+        "wavlm_layer_09/SVR_RBF",
+        "wavlm_layer_10/RidgeCV"
+      ],
+      "inner_optimal_weights": [
+        0.0,
+        0.5,
+        0.5
+      ]
+    }
+  ]
+}
