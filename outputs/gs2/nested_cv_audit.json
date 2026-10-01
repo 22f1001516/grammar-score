@@ -1,0 +1,49 @@
+{
+  "outer_cv_rmse": 0.6130661828841709,
+  "outer_cv_mae": 0.4663461208030954,
+  "candidate_list": [
+    "acoustic+language+LightGBM",
+    "acoustic+language+speech+Ridge",
+    "acoustic+language+text+Ridge",
+    "acoustic+language+speech+text+Ridge",
+    "speech_embedding+Ridge"
+  ],
+  "selected_by_fold": [
+    {
+      "fold": 0,
+      "feature_set": "speech_embedding",
+      "model": "Ridge",
+      "inner_cv_rmse": 0.6484923487604232,
+      "outer_rmse": 0.5962139615072304
+    },
+    {
+      "fold": 1,
+      "feature_set": "speech_embedding",
+      "model": "Ridge",
+      "inner_cv_rmse": 0.6306722395567215,
+      "outer_rmse": 0.60216756182584
+    },
+    {
+      "fold": 2,
+      "feature_set": "acoustic+language+speech",
+      "model": "Ridge",
+      "inner_cv_rmse": 0.627638724943487,
+      "outer_rmse": 0.6149832000252192
+    },
+    {
+      "fold": 3,
+      "feature_set": "speech_embedding",
+      "model": "Ridge",
+      "inner_cv_rmse": 0.6282225850433061,
+      "outer_rmse": 0.6433372268511086
+    },
+    {
+      "fold": 4,
+      "feature_set": "speech_embedding",
+      "model": "Ridge",
+      "inner_cv_rmse": 0.6513843784257264,
+      "outer_rmse": 0.6074887106251977
+    }
+  ],
+  "note": "Outer folds evaluate inner-CV selection among the fixed candidate list. Hyperparameters are held fixed."
+}
