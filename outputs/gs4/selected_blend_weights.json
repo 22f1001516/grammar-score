@@ -1,0 +1,47 @@
+{
+  "candidates": [
+    "acoustic+language+speech+LightGBM",
+    "acoustic+language+speech+text+LightGBM",
+    "speech_embedding+Ridge"
+  ],
+  "weights_selected_by_full_training_inner_cv": [
+    0.25,
+    0.25,
+    0.5
+  ],
+  "inner_cv_rmse_by_weight_set": {
+    "0.3333333333333333,0.3333333333333333,0.3333333333333333": 0.5665040187079351,
+    "0.5,0.25,0.25": 0.5724885837653957,
+    "0.25,0.5,0.25": 0.5747882803264343,
+    "0.25,0.25,0.5": 0.5585834205569088,
+    "0.4,0.4,0.2": 0.5785062952737909
+  },
+  "weight_grid": [
+    [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    [
+      0.5,
+      0.25,
+      0.25
+    ],
+    [
+      0.25,
+      0.5,
+      0.25
+    ],
+    [
+      0.25,
+      0.25,
+      0.5
+    ],
+    [
+      0.4,
+      0.4,
+      0.2
+    ]
+  ],
+  "note": "Weights are selected by inner CV on training data only; test labels are not used."
+}

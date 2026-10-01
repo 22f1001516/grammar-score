@@ -1,0 +1,9 @@
+{
+  "model": "acoustic+language+speech+LightGBM",
+  "unrounded_oof_rmse": 0.5848016464674279,
+  "rounded_to_0_5_oof_rmse": 0.6036839655805757,
+  "oof_only_affine_calibration_rmse": 0.579997834515469,
+  "affine_slope": 1.0601332095380633,
+  "affine_intercept": -0.19146570823748282,
+  "note": "Diagnostic only; calibration is not applied."
+}

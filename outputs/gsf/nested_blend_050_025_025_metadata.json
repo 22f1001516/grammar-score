@@ -1,0 +1,31 @@
+{
+  "method": "fixed_weights_on_inner_cv_selected_top_three",
+  "weights_in_selected_candidate_order": [
+    0.5,
+    0.25,
+    0.25
+  ],
+  "selected_candidates": [
+    {
+      "candidate": "wavlm_layer_07__SVR_RBF",
+      "inner_cv_mae": 0.4123208878260767
+    },
+    {
+      "candidate": "wavlm_layer_09__SVR_RBF",
+      "inner_cv_mae": 0.413412797594991
+    },
+    {
+      "candidate": "wavlm_layer_08__SVR_RBF",
+      "inner_cv_mae": 0.4138731357673181
+    }
+  ],
+  "inner_cv_blend_mae": 0.4061207775670658,
+  "rows": 216,
+  "columns": [
+    "filename",
+    "label"
+  ],
+  "prediction_min": 1.7453651178596057,
+  "prediction_max": 5.0,
+  "submission_path": "D:\\grammar_scoring\\outputs\\gsf\\nested_blend_050_025_025_submission.csv"
+}

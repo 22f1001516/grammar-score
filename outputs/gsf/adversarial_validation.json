@@ -1,0 +1,6 @@
+{
+  "feature_set": "acoustic+language+wavlm_last_mean_std",
+  "auc_mean": 0.865486405978882,
+  "auc_std": 0.021143083508184495,
+  "note": "High AUC indicates distribution shift; it does not by itself justify dropping or normalizing features."
+}

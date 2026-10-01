@@ -4,6 +4,5 @@ __pycache__/
 *.py[cod]
 cache/
 data/
-outputs/
 .ipynb_checkpoints/
 *.tmp
