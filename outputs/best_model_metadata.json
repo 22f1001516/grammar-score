@@ -1,7 +1,0 @@
-{
-  "feature_set": "acoustic+language",
-  "model": "LightGBM",
-  "cv_rmse": 0.6744105143579461,
-  "feature_count": 173,
-  "asr_model": "small.en"
-}

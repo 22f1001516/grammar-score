@@ -1,9 +1,0 @@
-{
-  "feature_set": "acoustic+language+speech",
-  "model": "LightGBM",
-  "cv_rmse": 0.5939784733789089,
-  "feature_count": 953,
-  "asr_model": "small.en",
-  "audio_embedding_model": "microsoft/wavlm-base-plus",
-  "text_embedding_model": "sentence-transformers/all-MiniLM-L6-v2"
-}
